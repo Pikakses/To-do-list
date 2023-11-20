@@ -1,0 +1,6 @@
+#RedirectMatch 302 "tasks/$" "http://localhost/pt21michalskia/tasks.php"
+#RedirectMatch 302 "tasks/(.*)/$" "http://localhost/pt21michalskia/tasks.php?id=$1"
+
+RewriteEngine on
+RewriteRule "tasks$" "tasks.php"
+RewriteRule "tasks/(.*)$" "tasks.php?id=$1"

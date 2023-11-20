@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ZADANIA</h1>
+        <div class="add_tasks">
+            <button id="add-task" class="button">DODAJ ZADANIE</button>
+            <div class="add_window hidden">
+                <label for="title">Tytuł</label>
+                <input type="text" name="title" id="title" autocomplete="off" class="input">
+                <label for="description">Opis</label>
+                <textarea name="description" id="description" cols="30" rows="10" class="input description"></textarea>
+                <button id="submit-task" class="button">Zatwierdź</button>
+            </div>
+        </div>
+        <div class="tasks-container" id="tasks-container">
+
+        </div>
+    </div>
+</body>
+</html>

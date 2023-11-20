@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: rgb(74, 21, 124);
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    font-size: 5rem;
+    padding: 2rem;
+}
+
+.done {
+    text-decoration: line-through;
+    color: rgb(177, 177, 177);
+}
+
+.button {
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.25rem;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 1rem;
+    color: black;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+.button:hover {
+    background-color: rgb(163, 163, 163);
+    cursor: pointer;
+}
+
+.input {
+    height: 3rem;
+    width: 24rem;
+    font-size: 1.3rem;
+    margin: 1rem;
+    border-radius: 20px ;
+    padding: 0.2rem;
+    color: black;
+}
+
+.description {
+    height: 10rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.add_tasks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tasks-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.add_window {
+    position: absolute;
+    margin-top: 6rem;
+    display: flex;
+    background-color: rgb(38, 7, 66);
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.task-item {
+    width: 40rem;
+    min-height: 5rem;
+    margin: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(125, 89, 184);
+}
+
+.task-title {
+    font-size: 1.7rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.task-description {
+    width: 90%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    word-wrap: break-word;
+    border-top: 1px solid rgb(174, 177, 161);
+}
+
+.delete-button {
+    opacity: 50%;
+    font-size: 2rem;
+}
+
+.delete-button:after {
+    content: "\274c";
+}
+
+.delete-button:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+
+
+.horizontal-task-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.change-status-div {
+    width: 90% !important;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.change-status {
+    height: 3rem;
+    width: 8.7rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+.change-status:hover {
+    cursor: pointer;
+    background-color: rgb(163, 163, 163);
+}
