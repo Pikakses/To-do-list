@@ -6,9 +6,6 @@
 header('Content-Type: application/json; charset=utf-8');
 
 
-
-
-
 $db = new PDO('mysql:host=localhost;dbname=to-do-list-db', 'root', '');
 
 
@@ -51,17 +48,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'PUT') {
-    // parse_str(file_get_contents('php://input'), $_PUT);
 
     $id = $_GET['id'] ?? null;
-    $status = $_PUT['status'] ?? null;
+    $status = $_GET['status'] ?? null;
     
     if($id === null || $status === null) {
         echo json_encode(false);
         return;
     }
 
-    if($status === 0) {
+    if($status == 0) {
         $status = 1;
     } else {
         $status = 0;
@@ -69,11 +65,16 @@ if($_SERVER['REQUEST_METHOD'] == 'PUT') {
 
 
     $stmt = $db->prepare('UPDATE tasks SET `status` = :status WHERE `id` = :id');
-    $stmt->execute([
-        ':id' => $id,
-        ':status' => $status,
-    ]);
 
+    try {
+        $stmt->execute([
+            ':id' => $id,
+            ':status' => $status,
+        ]);
+        echo json_encode(true);
+    } catch (PDOException $error) {
+        echo json_encode(false);
+    }
     return;
 }
 
@@ -90,5 +91,6 @@ if($_SERVER['REQUEST_METHOD'] == 'DELETE') {
         ':id' => $id,
     ]);
 
+    echo json_encode(true);
     return;
 }

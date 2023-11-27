@@ -104,55 +104,37 @@ label {
     font-size: 1.7rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 0.5rem;
-    width: 90%;
+    width: 100%;
 }
 
 .task-description {
-    width: 90%;
+    width: 100%;
     font-size: 1.3rem;
     padding: 0.5rem;
     word-wrap: break-word;
     border-top: 1px solid rgb(174, 177, 161);
+    border-bottom: 1px solid rgb(174, 177, 161);
 }
-
-.delete-button {
-    opacity: 50%;
-    font-size: 2rem;
-}
-
-.delete-button:after {
-    content: "\274c";
-}
-
-.delete-button:hover {
-    opacity: 100%;
-    cursor: pointer;
-}
-
 
 
 .horizontal-task-div {
     display: flex;
     flex-direction: row;
     width: 100%;
-}
-
-.change-status-div {
-    width: 90% !important;
-    margin: 1rem;
     justify-content: center;
 }
 
-.change-status {
+.button-med {
     height: 3rem;
     width: 8.7rem;
     background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 20px;
     font-size: 1.2rem;
+    margin: 1rem;
 }
 
-.change-status:hover {
+.button-med:hover {
     cursor: pointer;
     background-color: rgb(163, 163, 163);
 }
